@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elegant Weather App</title>
+    <link rel="stylesheet" href="weather-app.css">
+</head>
+<body>
+    <div class="weather-container">
+        <div class="animated-bg" id="animatedBg"></div>
+        
+        <div class="weather-app">
+            <div class="search-section">
+                <input type="text" id="cityInput" placeholder="Enter city name..." class="search-input">
+                <button id="searchBtn" class="search-btn">Search</button>
+                <button id="locationBtn" class="location-btn" title="Use current location">📍</button>
+            </div>
+            
+            <div class="controls-section">
+                <div class="unit-toggle">
+                    <button id="metricBtn" class="unit-btn active">°C</button>
+                    <button id="imperialBtn" class="unit-btn">°F</button>
+                </div>
+                <button id="favoritesBtn" class="favorites-btn">⭐</button>
+            </div>
+            
+            <div class="current-weather" id="currentWeather">
+                <div class="weather-icon">
+                    <div class="weather-symbol" id="weatherSymbol">☀️</div>
+                </div>
+                <div class="weather-info">
+                    <h1 class="city-name" id="cityName">Choose Location</h1>
+                    <div class="temperature" id="temperature">--°</div>
+                    <div class="weather-desc" id="weatherDesc">--</div>
+                    <div class="weather-details">
+                        <div class="detail-item">
+                            <span class="label">Feels like</span>
+                            <span class="value" id="feelsLike">--°</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="label">Humidity</span>
+                            <span class="value" id="humidity">--%</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="label">Wind</span>
+                            <span class="value" id="windSpeed">-- km/h</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="label">Pressure</span>
+                            <span class="value" id="pressure">-- hPa</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="label">UV Index</span>
+                            <span class="value" id="uvIndex">--</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="label">Visibility</span>
+                            <span class="value" id="visibility">-- km</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="forecast-tabs">
+                <button id="dailyTab" class="tab-btn active">Daily</button>
+                <button id="hourlyTab" class="tab-btn">Hourly</button>
+            </div>
+            
+            <div class="forecast-section" id="forecastSection">
+                <h2 class="forecast-title">5-Day Forecast</h2>
+                <div class="forecast-container" id="forecastContainer">
+                    <!-- Forecast items will be dynamically generated -->
+                </div>
+            </div>
+            
+            <div class="hourly-section" id="hourlySection" style="display: none;">
+                <h2 class="forecast-title">24-Hour Forecast</h2>
+                <div class="hourly-container" id="hourlyContainer">
+                    <!-- Hourly forecast items will be dynamically generated -->
+                </div>
+            </div>
+            
+            <div class="alerts-section" id="alertsSection" style="display: none;">
+                <h2 class="alerts-title">Weather Alerts</h2>
+                <div class="alerts-container" id="alertsContainer">
+                    <!-- Weather alerts will be dynamically generated -->
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="weather-app.js"></script>
+</body>
+</html>
